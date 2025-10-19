@@ -31,3 +31,10 @@ while(1)
     vTaskDelay(pdMS_TO_TICKS(2000));             // Delay 2 giây
 }
 Tạm dừng tác vụ trong 2000 mili giây (2 giây). Hàm vTaskDelay sẽ không chiếm dụng CPU, cho phép các tác vụ khác có độ ưu tiên thấp hơn được thực thi.
+Yêu cầu phần mềm
+
+FreeRTOS (sử dụng xQueueSend(), vTaskDelay()).
+
+UART1 đã được cấu hình sẵn để truyền chuỗi.
+
+PWM Control Task riêng biệt đang nhận dữ liệu từ xBlinkQueue.
